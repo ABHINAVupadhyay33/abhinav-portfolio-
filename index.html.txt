@@ -1,0 +1,98 @@
+<!DOCTYPE html><html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Abhinav Upadhyay | Portfolio</title><!-- Tailwind CSS CDN -->
+<script src="https://cdn.tailwindcss.com"></script>
+
+<!-- React & ReactDOM -->
+<script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+<!-- Babel -->
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+  </head>
+  <body class="bg-gray-900 text-white">
+    <div id="root"></div><script type="text/babel">
+  function App() {
+    return (
+      <div className="min-h-screen font-sans">
+        {/* Navbar */}
+        <nav className="flex justify-between items-center p-6 bg-gray-800 shadow-lg">
+          <h1 className="text-2xl font-bold">Abhinav Upadhyay</h1>
+          <ul className="flex gap-6 text-gray-300">
+            <li className="hover:text-white cursor-pointer">Home</li>
+            <li className="hover:text-white cursor-pointer">About</li>
+            <li className="hover:text-white cursor-pointer">Skills</li>
+            <li className="hover:text-white cursor-pointer">Projects</li>
+            <li className="hover:text-white cursor-pointer">Contact</li>
+          </ul>
+        </nav>
+
+        {/* Hero Section */}
+        <section className="flex flex-col justify-center items-center text-center py-24">
+          <h2 className="text-5xl font-extrabold mb-4">Hi, I'm Abhinav 👋</h2>
+          <p className="text-xl text-gray-400 mb-6">
+            Student | Future Engineer
+          </p>
+          <button className="px-6 py-3 bg-blue-600 hover:bg-blue-700 rounded-xl text-lg shadow-lg">
+            View My Work
+          </button>
+        </section>
+
+        {/* About Section */}
+        <section className="max-w-4xl mx-auto px-6 py-16">
+          <h3 className="text-3xl font-bold mb-4">About Me</h3>
+          <p className="text-gray-300 leading-relaxed">
+            I'm Abhinav Upadhyay, a Class 9 student who loves Maths and problem-solving.
+            I'm learning web development and building cool projects using modern tools like React.
+            I enjoy understanding how things work and improving my skills step by step.
+          </p>
+        </section>
+
+        {/* Skills Section */}
+        <section className="bg-gray-800 py-16">
+          <div className="max-w-4xl mx-auto px-6">
+            <h3 className="text-3xl font-bold mb-6">Skills</h3>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+              {['Maths', 'HTML', 'CSS', 'JavaScript', 'React', 'Problem Solving'].map(skill => (
+                <div key={skill} className="bg-gray-700 p-4 rounded-xl text-center shadow">
+                  {skill}
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Projects Section */}
+        <section className="max-w-4xl mx-auto px-6 py-16">
+          <h3 className="text-3xl font-bold mb-6">Projects</h3>
+          <div className="bg-gray-800 p-6 rounded-xl shadow">
+            <h4 className="text-xl font-semibold">Personal Portfolio Website</h4>
+            <p className="text-gray-400 mt-2">
+              A modern portfolio website built using React and Tailwind CSS.
+            </p>
+          </div>
+        </section>
+
+        {/* Contact Section */}
+        <section className="bg-gray-800 py-16 text-center">
+          <h3 className="text-3xl font-bold mb-4">Contact Me</h3>
+          <p className="text-gray-400 mb-4">Let's connect and build something awesome!</p>
+          <p className="text-blue-400">Email: your-email@example.com</p>
+        </section>
+
+        {/* Footer */}
+        <footer className="text-center py-6 text-gray-500">
+          © 2026 Abhinav Upadhyay. All rights reserved.
+        </footer>
+      </div>
+    );
+  }
+
+  ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+</script>
+
+  </body>
+</html>
